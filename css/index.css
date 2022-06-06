@@ -1,0 +1,185 @@
+/* 各个页面相同的样式表 : 头, 尾部 */
+/* 版心 */
+
+.main {
+    height: 800px;
+    padding-bottom: 100px;
+    background: url('../upload/bgi.jpeg') no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+/* 快捷导航 */
+.shortcut {
+    position: fixed;
+    align-items: center;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 52px;
+    /* background-color: #333; */
+    backdrop-filter: blur(5px);
+    z-index: 99;
+}
+
+.shortcut .wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 52px;
+
+}
+
+.shortcut img {
+    float: left;
+    margin-right: 20px;
+    height: 52px;
+    border-radius: 50%;
+}
+
+.shortcut span {
+    line-height: 52px;
+    height: 52px;
+    color: #999;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* 头部 */
+.header {
+    position: relative;
+    top: 52px;
+    /* margin: 30px auto; */
+    height: 90px;
+    background-color: rgba(109, 109, 109, 0.7);
+}
+
+.left {
+    position: relative;
+    top: 52px;
+    left: 20%;
+    float: left;
+    margin-top: 10px;
+    height: 500px;
+    width: 250px;
+    /* background-color: #ddd; */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.left li {
+    /* position: relative; */
+    float: left;
+    width: 100%;
+    transition: all 1ms;
+}
+
+.left .abox {
+    width: 50%;
+    padding: 20px;
+    transition: all 1s;
+    border-radius: 15px;
+}
+
+.left li a {
+    /* text-align: center; */
+    height: 30px;
+    line-height: 30px;
+    color: #bbb;
+}
+
+.left a::after {
+    content: '>';
+    position: absolute;
+    right: 20px;
+    float: right;
+    color: #bbb;
+}
+
+.left li:hover .abox {
+    width: 100%;
+    background-color: rgba(109, 109, 109, 0.5);
+    /* backdrop-filter: blur(5px); */
+}
+
+/* 版权footer */
+.footer {
+    height: 342px;
+    background-color: #333;
+}
+
+.footer .wrapper {
+    width: 1393px;
+}
+
+.footer .top {
+    padding-top: 59px;
+    padding-left: 135px;
+    height: 175px;
+    border-bottom: 3px solid #434343;
+}
+
+.footer .top li {
+    position: relative;
+    float: left;
+    margin-right: 300px;
+    width: 195px;
+    height: 58px;
+
+    line-height: 58px;
+}
+
+.footer .top li:last-child {
+    margin-right: 0;
+}
+
+/* 伪元素添加的标签  行内 */
+/* 如果行内块和行内文字无法通过vertical-align或行高对齐, 定位 */
+.footer .top li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* display: inline-block; */
+    content: '';
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    vertical-align: middle;
+}
+
+.footer .top li span {
+    margin-left: 77px;
+    font-size: 28px;
+    color: #fff;
+}
+
+/* 第二个li里面的berfore添加背景图位置属性 */
+.footer .top li:nth-child(2)::before {
+    background-position: -130px 0;
+}
+
+.footer .top li:nth-child(3)::before {
+    background-position: -64px 0;
+}
+
+.footer .bottom {
+    padding-top: 40px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+.footer .bottom a {
+    font-size: 14px;
+    color: #999;
+}
+
+.footer .bottom p {
+    margin-bottom: 20px;
+}
