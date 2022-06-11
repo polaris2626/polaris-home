@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>星星的博客</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jQuery-3.6.0.js"></script>
+    <script src="./js/nav01.js"></script>
+    <title>星星的博客</title>
 </head>
 
 <body>
-    <div class="main">
+    <div class="main clearfix">
         <div class="shortcut clearfix">
             <div class="wrapper">
                 <img src="./upload/portrait.jpg" alt="polaris">
@@ -21,26 +23,62 @@
         <div class="header wrapper clearfix">
 
         </div>
+        <div class="content">
+            <!-- 左边侧边栏 -->
+            <div class="content_left">
+                <div class="tag"></div>
+                <!-- 顶部标题 -->
+                <div class="left_title">
+                    <a href="javascript:void(0)">操作栏</a>
+                </div>
+                <!-- 分割线 -->
+                <div class="seg"></div>
+                <!-- 菜单栏 -->
+                <div class="nav">
+                    <!-- 菜单栏子项 -->
+                    <div class="nav_menu">
+                        <!-- 主标题 -->
+                        <div class="nav_title">
+                            <a href="javascript:void(0)" data-src="./html/test1.html">
+                                主界面
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav_menu">
+                        <!-- 主标题 -->
+                        <div class="nav_title">测试</div>
+                        <!-- 子标题 -->
+                        <div class="nav_content">
+                            <a href="#" data-src="./html/test2.html">
+                                测试界面2
+                            </a>
+                            <a href="#" data-src="./html/test3.html">
+                                测试界面3
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav_menu">
+                        <!-- 主标题 -->
+                        <div class="nav_title">测试</div>
+                        <!-- 子标题 -->
+                        <div class="nav_content">
+                            <a href="#" data-src="./html/test2.html">
+                                测试界面2
+                            </a>
+                            <a href="#" data-src="./html/test3.html">
+                                测试界面3
+                            </a>
+                        </div>
+                    </div>
+                    <div class="seg"></div>
+                </div>
+            </div>
 
-        <div class="left">
-            <ul>
-                <li>
-                    <div class="abox"><a href="#">github</a></div>
-                </li>
-                <li>
-                    <div class="abox"><a href="#">github</a></div>
-                </li>
-                <li>
-                    <div class="abox"><a href="#">github</a></div>
-                </li>
-                <li>
-                    <div class="abox"><a href="#">github</a></div>
-                </li>
-                <li>
-                    <div class="abox"><a href="#">github</a></div>
-                </li>
 
-            </ul>
+            <!-- 右边内容区 -->
+            <div class="content_right">
+                <iframe frameborder="0" src="./html/test1.html" id="iframe1"></iframe>
+            </div>
         </div>
     </div>
 </body>

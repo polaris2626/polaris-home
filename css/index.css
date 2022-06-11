@@ -2,17 +2,15 @@
 /* 版心 */
 
 .main {
-    height: 800px;
-    padding-bottom: 100px;
-    background: url('../upload/bgi.jpeg') no-repeat;
-    background-size: cover;
+    height: 715px;
+    background-color: rgb(0, 47, 147);
 }
 
 .wrapper {
     margin: 0 auto;
 }
 
-/* 快捷导航 */
+/* 顶栏 */
 .shortcut {
     position: fixed;
     align-items: center;
@@ -20,8 +18,7 @@
     margin: 0 auto;
     width: 100%;
     height: 52px;
-    /* background-color: #333; */
-    backdrop-filter: blur(5px);
+    background-color: rgb(0, 47, 147);
     z-index: 99;
 }
 
@@ -43,143 +40,126 @@
 .shortcut span {
     line-height: 52px;
     height: 52px;
-    color: #999;
+    color: #ccc;
     font-size: 32px;
     font-weight: 700;
 }
 
-/* 头部 */
-.header {
-    position: relative;
-    top: 52px;
-    /* margin: 30px auto; */
-    height: 90px;
-    background-color: rgba(109, 109, 109, 0.7);
-}
-
-.left {
-    position: relative;
-    top: 52px;
-    left: 20%;
-    float: left;
-    margin-top: 10px;
-    height: 500px;
-    width: 250px;
-    /* background-color: #ddd; */
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-}
-
-.left li {
-    /* position: relative; */
-    float: left;
+/* 初始化盒子 */
+.content {
+    position: fixed;
+    margin-top: 52px;
     width: 100%;
-    transition: all 1ms;
+    height: 100%;
 }
 
-.left .abox {
-    width: 50%;
-    padding: 20px;
+/* 侧边栏 */
+.content_left {
+    position: absolute;
+    left: -18%;
+    float: left;
+    width: 19%;
+    height: 100%;
+    /* background-color: rgb(255, 255, 255); */
+    backdrop-filter: blur(10px);
     transition: all 1s;
-    border-radius: 15px;
+    z-index: 2;
 }
 
-.left li a {
-    /* text-align: center; */
+.content_left:hover {
+    left: 0;
+}
+
+.left_title {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+.left_title>a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(0, 47, 147);
+    font-weight: 900;
+}
+
+.seg {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid rgb(0, 47, 147);
+}
+
+.nav {
+    /* 开启弹性布局 */
+    display: flex;
+    /* 强制垂直排列子盒子 */
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.nav_title,
+.nav_title>a {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: rgb(0, 47, 147);
+    font-weight: 700;
+    /* background-color: #fff; */
+    backdrop-filter: blur(10px);
+    /* 鼠标接触显示手型 */
+    cursor: pointer;
+    /* z-index: 2; */
+}
+
+.nav_title:hover,
+.nav_title:hover a {
+    color: #fff;
+    /* background-color: rgb(0, 47, 147); */
+}
+
+.nav_content {
+    width: 100%;
+    /* height: 100%; */
+    background-color: rgba(0, 47, 147, 0.2);
+}
+
+.nav_content>a {
+    display: block;
+    width: 100%;
     height: 30px;
     line-height: 30px;
-    color: #bbb;
-}
-
-.left a::after {
-    content: '>';
-    position: absolute;
-    right: 20px;
-    float: right;
-    color: #bbb;
-}
-
-.left li:hover .abox {
-    width: 100%;
-    background-color: rgba(109, 109, 109, 0.5);
-    /* backdrop-filter: blur(5px); */
-}
-
-/* 版权footer */
-.footer {
-    height: 342px;
-    background-color: #333;
-}
-
-.footer .wrapper {
-    width: 1393px;
-}
-
-.footer .top {
-    padding-top: 59px;
-    padding-left: 135px;
-    height: 175px;
-    border-bottom: 3px solid #434343;
-}
-
-.footer .top li {
-    position: relative;
-    float: left;
-    margin-right: 300px;
-    width: 195px;
-    height: 58px;
-
-    line-height: 58px;
-}
-
-.footer .top li:last-child {
-    margin-right: 0;
-}
-
-/* 伪元素添加的标签  行内 */
-/* 如果行内块和行内文字无法通过vertical-align或行高对齐, 定位 */
-.footer .top li::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    /* display: inline-block; */
-    content: '';
-    width: 58px;
-    height: 58px;
-    background-image: url(../images/sprites.png);
-    vertical-align: middle;
-}
-
-.footer .top li span {
-    margin-left: 77px;
-    font-size: 28px;
-    color: #fff;
-}
-
-/* 第二个li里面的berfore添加背景图位置属性 */
-.footer .top li:nth-child(2)::before {
-    background-position: -130px 0;
-}
-
-.footer .top li:nth-child(3)::before {
-    background-position: -64px 0;
-}
-
-.footer .bottom {
-    padding-top: 40px;
-    font-size: 14px;
-    color: #999;
     text-align: center;
-}
-
-.footer .bottom a {
     font-size: 14px;
-    color: #999;
+    color: rgb(0, 47, 147);
+    transition: all .3s;
 }
 
-.footer .bottom p {
-    margin-bottom: 20px;
+.nav_content>a:hover {
+    color: #fff;
+    font-weight: 600;
+    background-color: rgb(0, 47, 147);
+}
+
+/* 内容区 */
+.content_right {
+    position: absolute;
+    left: 1%;
+    float: left;
+    width: 99%;
+    height: 100%;
+    background-color: #6495ed;
+    z-index: 1;
+}
+
+.content_right iframe {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }
